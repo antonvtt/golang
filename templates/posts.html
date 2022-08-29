@@ -1,0 +1,42 @@
+{{ define "allposts"}}
+{{ template "header" }}
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+   
+    
+      <main class="px-3">
+        <h1>Посты</h1>
+        <table class="table color-white">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Anons</th>
+              <th scope="col">Ссылка</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range . }}
+            <tr>
+              <th scope="row">{{.Id}}</th>
+              <td>{{.Title}}</td>
+              <td>{{.Anons}}</td>
+              <td><a href="/post/{{.Id}}">Статья</a></td>
+            </tr>
+           
+            {{else}}
+            <tr>
+              <th scope="row" colspan="3">Статей нет</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            {{end}}
+          </tbody>
+        </table>
+      </main>
+
+      {{ template "footer" }}
+      
+   {{ end }}

@@ -1,0 +1,29 @@
+{{ define "create"}}
+{{ template "header" }}
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+   
+    
+      <main class="px-3">
+        <h1>Форма добавления</h1>
+        <form action="/save_article/" method="POST">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Заголовок</label>
+            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Введите Заголовок">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Анонос</label>
+            <textarea name="anons" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Статья</label>
+            <textarea name="full_text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button class="btn btn-success" type="submit">Отправить</button>
+        </form>
+      </main>
+
+      {{ template "footer" }}
+      
+   {{ end }}

@@ -1,0 +1,10 @@
+.color-black{
+    color: #000;
+}
+.color-white{
+    color: #fff;
+}
+.nav-link.active{
+    padding: 10px;
+    boder: 1px solid #fff;
+}

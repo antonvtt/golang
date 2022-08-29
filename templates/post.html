@@ -1,0 +1,16 @@
+{{ define "post"}}
+{{ template "header" }}
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+   
+    
+      <main class="px-3 color-white">
+        <h1>Пост {{.Id}}</h1>
+        <h3>Пост {{.Title}}</h3>
+        <p class="color-white">{{.Full_text}}</p>
+      </main>
+
+      {{ template "footer" }}
+      
+   {{ end }}
